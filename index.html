@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DireitoParaTodos — Justiça acessível. Informação para todos.</title>
+    <meta name="description" content="Conhecer seus direitos deveria ser simples. A DireitoParaTodos usa tecnologia e inteligência artificial para explicar seus direitos como consumidor em linguagem simples e acessível.">
+    <meta name="keywords" content="direitos do consumidor, informação jurídica, legaltech, acesso à justiça, DireitoParaTodos">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DireitoParaTodos — Justiça acessível. Informação para todos.">
+    <meta property="og:description" content="Conhecer seus direitos deveria ser simples. Entenda melhor seus direitos como consumidor em uma linguagem que faz sentido para você.">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="DireitoParaTodos">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DireitoParaTodos — Justiça acessível. Informação para todos.">
+    <meta name="twitter:description" content="Conhecer seus direitos deveria ser simples. Entenda melhor seus direitos como consumidor em uma linguagem que faz sentido para você.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-profundo: #001e58;
+            --azul-marinho: #002a7b;
+            --azul-vibrante: #0b62fa;
+            --azul-claro: #E8F1FF;
+            --azul-medio: #4f94ff;
+            --azul-escuro: #041b3c;
+            --dourado: #e4ac6a;
+            --cinza-escuro: #041b3c;
+            --cinza-claro: #F3F4F6;
+            --branco: #FFFFFF;
+            --sombra-sm: 0 2px 8px rgba(0, 42, 123, 0.10);
+            --sombra-md: 0 6px 24px rgba(0, 42, 123, 0.15);
+            --sombra-lg: 0 12px 40px rgba(0, 42, 123, 0.18);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 24px;
+            --transicao: 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--cinza-escuro);
+            background: var(--branco);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--azul-vibrante);
+            transition: color var(--transicao);
+        }
+
+        a:hover {
+            color: var(--azul-marinho);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--azul-vibrante);
+            background: var(--azul-claro);
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            color: var(--cinza-escuro);
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #3B5274;
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+
+        .section-pad {
+            padding: 80px 0;
+        }
+
+        /* ===== Accessibility Skip Link ===== */
+        .skip-link {
+            position: absolute;
+            top: -60px;
+            left: 16px;
+            background: var(--azul-marinho);
+            color: var(--branco);
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            z-index: 2000;
+            transition: top var(--transicao);
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        /* ===== Buttons ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 14px 32px;
+            border-radius: var(--radius-sm);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transicao);
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--azul-vibrante);
+            outline-offset: 3px;
+        }
+
+        .btn-primary {
+            background: var(--azul-vibrante);
+            color: var(--branco);
+            box-shadow: var(--sombra-sm);
+        }
+
+        .btn-primary:hover {
+            background: var(--azul-marinho);
+            color: var(--branco);
+            box-shadow: var(--sombra-md);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--azul-marinho);
+            border: 2px solid var(--azul-marinho);
+        }
+
+        .btn-secondary:hover {
+            background: var(--azul-marinho);
+            color: var(--branco);
+        }
+
+        .btn-light {
+            background: var(--branco);
+            color: var(--azul-marinho);
+        }
+
+        .btn-light:hover {
+            background: var(--azul-claro);
+            transform: translateY(-2px);
+        }
+
+        .btn-lg {
+            padding: 16px 40px;
+            font-size: 1.05rem;
+        }
+
+        /* ===== Header ===== */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0, 42, 123, 0.08);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--azul-marinho);
+        }
+
+        .logo svg {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-desktop a {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.92rem;
+            color: var(--cinza-escuro);
+        }
+
+        .nav-desktop a:hover {
+            color: var(--azul-vibrante);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-toggle span {
+            width: 26px;
+            height: 3px;
+            background: var(--azul-marinho);
+            border-radius: 2px;
+            transition: all var(--transicao);
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .nav-mobile {
+            display: none;
+            position: absolute;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: var(--branco);
+            flex-direction: column;
+            padding: 20px 24px;
+            gap: 16px;
+            box-shadow: var(--sombra-md);
+        }
+
+        .nav-mobile.active {
+            display: flex;
+        }
+
+        .nav-mobile a {
+            font-weight: 500;
+            color: var(--cinza-escuro);
+            padding: 8px 0;
+        }
+
+        .nav-mobile .btn {
+            margin-top: 8px;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-claro) 0%, #F2F7FF 100%);
+            padding: 60px 0 80px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            color: var(--azul-vibrante);
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .hero-tag::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 3px;
+            background: var(--dourado);
+            border-radius: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: var(--cinza-escuro);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: #3B5274;
+            margin-bottom: 32px;
+            max-width: 520px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .hero-microtext {
+            font-size: 0.85rem;
+            color: #5B7095;
+        }
+
+        /* ===== Phone Mockup ===== */
+        .phone-mockup {
+            position: relative;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .phone-frame {
+            background: var(--cinza-escuro);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: var(--sombra-lg);
+        }
+
+        .phone-screen {
+            background: linear-gradient(180deg, var(--azul-claro) 0%, #F2F7FF 100%);
+            border-radius: 30px;
+            overflow: hidden;
+            aspect-ratio: 9 / 18;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .phone-header {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .phone-header h4 {
+            font-size: 0.95rem;
+            color: var(--azul-marinho);
+        }
+
+        .phone-search {
+            background: var(--branco);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--sombra-sm);
+        }
+
+        .phone-search svg {
+            width: 16px;
+            height: 16px;
+            color: var(--azul-vibrante);
+            flex-shrink: 0;
+        }
+
+        .phone-search span {
+            font-size: 0.8rem;
+            color: #8298B8;
+        }
+
+        .phone-cat {
+            background: var(--branco);
+            border-radius: var(--radius-sm);
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--sombra-sm);
+        }
+
+        .phone-cat .cat-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--azul-claro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .phone-cat .cat-icon svg {
+            width: 18px;
+            height: 18px;
+            color: var(--azul-marinho);
+        }
+
+        .phone-cat span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--cinza-escuro);
+        }
+
+        .phone-content {
+            background: var(--branco);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            box-shadow: var(--sombra-sm);
+            flex: 1;
+        }
+
+        .phone-content h5 {
+            font-size: 0.78rem;
+            color: var(--azul-marinho);
+            margin-bottom: 6px;
+        }
+
+        .phone-content p {
+            font-size: 0.7rem;
+            color: #5B7095;
+            line-height: 1.5;
+        }
+
+        .phone-accessibility {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .phone-accessibility .acc-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--azul-marinho);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--branco);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .phone-demo-badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: var(--azul-marinho);
+            color: var(--dourado);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 12px;
+            box-shadow: var(--sombra-md);
+            z-index: 2;
+        }
+
+        /* ===== Problem Cards ===== */
+        .cards-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .card {
+            background: var(--branco);
+            border-radius: var(--radius-md);
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow: var(--sombra-sm);
+            transition: all var(--transicao);
+            border: 1px solid #D6E2F5;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--sombra-md);
+        }
+
+        .card-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--azul-claro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .card-icon svg {
+            width: 36px;
+            height: 36px;
+            color: var(--azul-marinho);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: var(--cinza-escuro);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #3B5274;
+        }
+
+        /* ===== Solution Section ===== */
+        .solution {
+            background: var(--cinza-claro);
+        }
+
+        .solution-intro {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 48px;
+        }
+
+        .benefits-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 28px 20px;
+            border-radius: var(--radius-md);
+            background: var(--branco);
+            transition: all var(--transicao);
+            box-shadow: var(--sombra-sm);
+        }
+
+        .benefit:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--sombra-md);
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--azul-medio);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+
+        .benefit-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--branco);
+        }
+
+        .benefit h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--cinza-escuro);
+        }
+
+        .benefit p {
+            font-size: 0.9rem;
+            color: #3B5274;
+        }
+
+        /* ===== How It Works ===== */
+        .steps-container {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .steps-line {
+            position: absolute;
+            top: 32px;
+            left: 12%;
+            right: 12%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--azul-vibrante) 0%, var(--azul-medio) 50%, var(--azul-claro) 100%);
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .step-num {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--branco);
+            border: 3px solid var(--azul-medio);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--azul-marinho);
+            box-shadow: var(--sombra-sm);
+        }
+
+        .step h4 {
+            font-size: 1rem;
+            color: var(--cinza-escuro);
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: #3B5274;
+            padding: 0 8px;
+        }
+
+        /* ===== App Demo Section ===== */
+        .app-demo {
+            background: linear-gradient(135deg, var(--azul-claro) 0%, #EDF4FF 100%);
+        }
+
+        .demo-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .demo-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .demo-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .demo-feature .df-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--branco);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: var(--sombra-sm);
+        }
+
+        .demo-feature .df-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--azul-vibrante);
+        }
+
+        .demo-feature h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .demo-feature p {
+            font-size: 0.9rem;
+            color: #3B5274;
+        }
+
+        .demo-phone-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Q&A Demo Card */
+        .qa-demo {
+            background: var(--branco);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            box-shadow: var(--sombra-md);
+            margin-top: 24px;
+            max-width: 380px;
+        }
+
+        .qa-demo .qa-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--azul-vibrante);
+            background: var(--azul-claro);
+            padding: 4px 10px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .qa-demo .qa-question {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--cinza-escuro);
+            margin-bottom: 10px;
+        }
+
+        .qa-demo .qa-answer {
+            font-size: 0.85rem;
+            color: #3B5274;
+            line-height: 1.6;
+        }
+
+        /* ===== Differentials ===== */
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .diff-block {
+            background: var(--cinza-claro);
+            border-radius: var(--radius-md);
+            padding: 32px 24px;
+            text-align: center;
+            transition: all var(--transicao);
+        }
+
+        .diff-block:hover {
+            background: var(--azul-claro);
+            transform: translateY(-4px);
+        }
+
+        .diff-block .diff-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--azul-marinho);
+            border: 2px solid var(--dourado);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .diff-block .diff-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--branco);
+        }
+
+        .diff-block h4 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .diff-block p {
+            font-size: 0.9rem;
+            color: #3B5274;
+        }
+
+        /* ===== Trust & Responsibility ===== */
+        .trust {
+            background: var(--cinza-claro);
+        }
+
+        .trust-content {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .trust-content > p {
+            font-size: 1.05rem;
+            color: #3B5274;
+            margin-bottom: 32px;
+        }
+
+        .trust-notice {
+            background: #FBF3E8;
+            border-left: 4px solid var(--dourado);
+            border-radius: var(--radius-sm);
+            padding: 20px 24px;
+            text-align: left;
+        }
+
+        .trust-notice strong {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            color: #8B6914;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        .trust-notice p {
+            font-size: 0.9rem;
+            color: #6B5210;
+        }
+
+        /* ===== CTA Section ===== */
+        .cta-section {
+            background: var(--azul-profundo);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(11, 98, 250, 0.25) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: "";
+            position: absolute;
+            bottom: -40%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(79, 148, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            color: var(--branco);
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #B0C8F0;
+            max-width: 620px;
+            margin: 0 auto 32px;
+        }
+
+        /* ===== Form Section ===== */
+        .form-section {
+            background: var(--branco);
+        }
+
+        .form-wrapper {
+            max-width: 560px;
+            margin: 0 auto;
+            background: var(--cinza-claro);
+            border-radius: var(--radius-lg);
+            padding: 48px 40px;
+            box-shadow: var(--sombra-md);
+        }
+
+        .form-wrapper h3 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .form-wrapper > p {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #3B5274;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--cinza-escuro);
+            margin-bottom: 6px;
+        }
+
+        .form-group label .optional {
+            font-weight: 400;
+            color: #5B7095;
+            font-size: 0.8rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #C2D2E8;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--cinza-escuro);
+            background: var(--branco);
+            transition: border var(--transicao);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--azul-vibrante);
+        }
+
+        .form-group input:focus-visible,
+        .form-group select:focus-visible {
+            outline: none;
+            border-color: var(--azul-vibrante);
+            box-shadow: 0 0 0 3px rgba(11, 98, 250, 0.2);
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .form-checkbox input {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--azul-vibrante);
+            flex-shrink: 0;
+        }
+
+        .form-checkbox label {
+            font-size: 0.85rem;
+            color: #3B5274;
+            font-weight: 400;
+        }
+
+        .form-privacy {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.82rem;
+            color: #5B7095;
+        }
+
+        .form-notice {
+            background: #FBF3E8;
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            margin-bottom: 24px;
+            font-size: 0.82rem;
+            color: #6B5210;
+            text-align: center;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: var(--azul-escuro);
+            color: #B0C4E0;
+            padding: 56px 0 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--branco);
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: #8298B8;
+            max-width: 280px;
+        }
+
+        .footer-col h5 {
+            color: var(--branco);
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-col ul a {
+            font-size: 0.88rem;
+            color: #8298B8;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--azul-vibrante);
+        }
+
+        .footer-notice {
+            border-top: 1px solid #1A3060;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .footer-notice p {
+            font-size: 0.82rem;
+            color: #5B7095;
+            margin-bottom: 8px;
+        }
+
+        .footer-final {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--dourado);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 968px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-microtext {
+                text-align: center;
+            }
+
+            .cards-grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .steps-line {
+                display: none;
+            }
+
+            .demo-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .diff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 28px;
+            }
+
+            .nav-desktop {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section-pad {
+                padding: 56px 0;
+            }
+
+            .hero {
+                padding: 40px 0 56px;
+            }
+
+            .benefits-grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .diff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-wrapper {
+                padding: 32px 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+
+        /* ===== Focus visibility for keyboard nav ===== */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--azul-vibrante);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes floatPhone {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-16px);
+            }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(11, 98, 250, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(11, 98, 250, 0);
+            }
+        }
+
+        @keyframes slideUpScreen {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes bounceDot {
+            0%, 80%, 100% {
+                transform: scale(0.6);
+                opacity: 0.4;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes growBar {
+            from { width: 0; }
+        }
+
+        /* Scroll-triggered animation classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.85);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal-scale.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger delays */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+
+        /* Hero entrance animations */
+        .hero-tag {
+            animation: fadeInLeft 0.8s ease both;
+        }
+
+        .hero h1 {
+            animation: fadeInUp 0.8s ease 0.15s both;
+        }
+
+        .hero-subtitle {
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .hero-buttons {
+            animation: fadeInUp 0.8s ease 0.45s both;
+        }
+
+        .hero-microtext {
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-visual .phone-mockup {
+            max-width: 340px;
+        }
+
+        .hero-visual .phone-frame {
+            padding: 14px;
+        }
+
+        .hero-visual .phone-screen {
+            aspect-ratio: 9 / 19;
+            padding: 20px 14px 10px;
+            gap: 8px;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+
+        .hero-visual .phone-screen::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Phone float animation */
+        .hero-visual .phone-mockup {
+            animation: fadeInRight 1s ease 0.3s both, floatPhone 5s ease-in-out 1.3s infinite;
+        }
+
+        /* Header slide down */
+        .header {
+            animation: fadeInUp 0.6s ease both;
+        }
+
+        /* ===== Interactive Phone Demo (Hero) ===== */
+        .phone-demo-container {
+            position: relative;
+        }
+
+        .phone-demo-screen {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            animation: slideUpScreen 0.5s ease both;
+        }
+
+        .phone-demo-screen.active {
+            display: flex;
+        }
+
+        .phone-status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.6rem;
+            color: var(--azul-marinho);
+            font-weight: 600;
+            padding: 0 4px 4px;
+        }
+
+        .phone-status-bar .status-time {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .phone-status-bar .status-icons {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .phone-status-bar .status-icons span {
+            display: inline-block;
+            width: 14px;
+            height: 8px;
+            border-radius: 2px;
+            background: var(--azul-marinho);
+            opacity: 0.3;
+        }
+
+        .phone-status-bar .status-icons span:last-child {
+            width: 16px;
+            opacity: 0.5;
+            border-radius: 2px;
+        }
+
+        .phone-app-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 0;
+        }
+
+        .phone-app-header .app-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--azul-marinho);
+        }
+
+        .phone-app-header .app-logo-mini {
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            background: var(--azul-marinho);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .phone-app-header .app-logo-mini::after {
+            content: "";
+            width: 10px;
+            height: 2px;
+            background: var(--dourado);
+            border-radius: 1px;
+        }
+
+        .phone-greeting {
+            font-size: 0.68rem;
+            color: #5B7095;
+            margin-bottom: 2px;
+        }
+
+        .phone-greeting strong {
+            color: var(--cinza-escuro);
+            font-size: 0.72rem;
+        }
+
+        .phone-search-bar {
+            background: var(--branco);
+            border-radius: 20px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: var(--sombra-sm);
+        }
+
+        .phone-search-bar svg {
+            width: 14px;
+            height: 14px;
+            color: var(--azul-vibrante);
+            flex-shrink: 0;
+        }
+
+        .phone-search-bar .search-text {
+            font-size: 0.7rem;
+            color: #8298B8;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .phone-search-bar .search-cursor {
+            display: inline-block;
+            width: 1.5px;
+            height: 10px;
+            background: var(--azul-vibrante);
+            animation: blink 1s step-end infinite;
+        }
+
+        .phone-section-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--azul-marinho);
+            margin-top: 4px;
+        }
+
+        .phone-cat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+
+        .phone-cat-tile {
+            background: var(--branco);
+            border-radius: 10px;
+            padding: 10px 8px;
+            text-align: center;
+            box-shadow: var(--sombra-sm);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .phone-cat-tile.selected {
+            background: var(--azul-vibrante);
+        }
+
+        .phone-cat-tile.selected .cat-tile-icon {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .phone-cat-tile.selected .cat-tile-icon svg {
+            color: var(--branco);
+        }
+
+        .phone-cat-tile.selected .cat-tile-label {
+            color: var(--branco);
+        }
+
+        .phone-cat-tile .cat-tile-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            background: var(--azul-claro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 4px;
+        }
+
+        .phone-cat-tile .cat-tile-icon svg {
+            width: 15px;
+            height: 15px;
+            color: var(--azul-marinho);
+        }
+
+        .phone-cat-tile .cat-tile-label {
+            font-size: 0.58rem;
+            font-weight: 500;
+            color: var(--cinza-escuro);
+            line-height: 1.2;
+        }
+
+        .phone-content-card {
+            background: var(--branco);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: var(--sombra-sm);
+        }
+
+        .phone-content-card .content-badge {
+            display: inline-block;
+            font-size: 0.52rem;
+            font-weight: 700;
+            color: var(--dourado);
+            background: var(--azul-marinho);
+            padding: 2px 6px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+        }
+
+        .phone-content-card h5 {
+            font-size: 0.68rem;
+            color: var(--azul-marinho);
+            margin-bottom: 4px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .phone-content-card .content-body {
+            font-size: 0.58rem;
+            color: #5B7095;
+            line-height: 1.5;
+        }
+
+        .phone-content-card .content-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+
+        .phone-content-card .content-step .step-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--azul-claro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.45rem;
+            font-weight: 700;
+            color: var(--azul-vibrante);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .phone-content-card .content-step .step-text {
+            font-size: 0.58rem;
+            color: #5B7095;
+            line-height: 1.4;
+        }
+
+        .phone-sources {
+            background: var(--branco);
+            border-radius: 10px;
+            padding: 8px 10px;
+            box-shadow: var(--sombra-sm);
+        }
+
+        .phone-sources h5 {
+            font-size: 0.62rem;
+            color: var(--azul-marinho);
+            margin-bottom: 6px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .phone-source-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 4px;
+        }
+
+        .phone-source-item .source-icon {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            background: var(--azul-claro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .phone-source-item .source-icon svg {
+            width: 9px;
+            height: 9px;
+            color: var(--azul-vibrante);
+        }
+
+        .phone-source-item .source-text {
+            font-size: 0.55rem;
+            color: #5B7095;
+        }
+
+        .phone-source-item .source-ext {
+            font-size: 0.45rem;
+            color: #8298B8;
+            margin-left: auto;
+        }
+
+        .phone-typing-area {
+            background: var(--branco);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: var(--sombra-sm);
+        }
+
+        .phone-typing-area .user-question {
+            background: var(--azul-vibrante);
+            color: var(--branco);
+            font-size: 0.6rem;
+            padding: 6px 10px;
+            border-radius: 10px 10px 2px 10px;
+            margin-left: auto;
+            max-width: 80%;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .phone-typing-area .ai-response {
+            background: var(--azul-claro);
+            font-size: 0.58rem;
+            padding: 6px 10px;
+            border-radius: 10px 10px 10px 2px;
+            max-width: 85%;
+            color: var(--cinza-escuro);
+            line-height: 1.5;
+        }
+
+        .phone-typing-area .typing-indicator {
+            display: flex;
+            gap: 3px;
+            padding: 6px 10px;
+            background: var(--azul-claro);
+            border-radius: 10px 10px 10px 2px;
+            width: fit-content;
+        }
+
+        .phone-typing-area .typing-indicator span {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--azul-medio);
+            animation: bounceDot 1.4s infinite ease-in-out both;
+        }
+
+        .phone-typing-area .typing-indicator span:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .phone-typing-area .typing-indicator span:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        .phone-typing-area .ai-label {
+            font-size: 0.48rem;
+            color: #8298B8;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .phone-typing-area .ai-label .ai-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--dourado);
+        }
+
+        .phone-typing-area .user-label {
+            font-size: 0.48rem;
+            color: #8298B8;
+            text-align: right;
+            margin-bottom: 2px;
+            margin-top: 6px;
+        }
+
+        .phone-bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 6px 0 2px;
+            border-top: 1px solid #D6E2F5;
+            margin-top: 2px;
+        }
+
+        .phone-bottom-nav .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .phone-bottom-nav .nav-item svg {
+            width: 14px;
+            height: 14px;
+            color: #8298B8;
+        }
+
+        .phone-bottom-nav .nav-item.active svg {
+            color: var(--azul-vibrante);
+        }
+
+        .phone-bottom-nav .nav-item span {
+            font-size: 0.45rem;
+            color: #8298B8;
+        }
+
+        .phone-bottom-nav .nav-item.active span {
+            color: var(--azul-vibrante);
+            font-weight: 600;
+        }
+
+        /* Accessibility buttons in demo phone */
+        .phone-acc-bar {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 2px;
+        }
+
+        .phone-acc-bar .acc-pill {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            background: var(--azul-marinho);
+            color: var(--branco);
+            font-size: 0.48rem;
+            font-weight: 600;
+            padding: 3px 7px;
+            border-radius: 10px;
+        }
+
+        .phone-acc-bar .acc-pill svg {
+            width: 9px;
+            height: 9px;
+        }
+
+        /* Progress dots for screen indicator */
+        .phone-progress-dots {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            padding: 4px 0;
+        }
+
+        .phone-progress-dots .pdot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #C2D2E8;
+            transition: all 0.3s ease;
+        }
+
+        .phone-progress-dots .pdot.active {
+            width: 16px;
+            border-radius: 3px;
+            background: var(--azul-vibrante);
+        }
+
+        /* Pulse on primary buttons */
+        .btn-primary {
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .hero-visual .phone-mockup {
+                animation: none;
+            }
+
+            .btn-primary {
+                animation: none;
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right,
+            .reveal-scale {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo" aria-label="DireitoParaTodos — Página inicial">
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="36" height="36" rx="10" fill="#002a7b"/>
+                        <path d="M11 12h14M11 18h14M11 24h9" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="26" cy="24" r="3" fill="#0b62fa"/>
+                    </svg>
+                    <span>DireitoParaTodos</span>
+                </a>
+
+                <nav class="nav-desktop" role="navigation" aria-label="Navegação principal">
+                    <a href="#como-funciona">Como funciona</a>
+                    <a href="#encontrar">O que você pode encontrar</a>
+                    <a href="#acessibilidade">Acessibilidade</a>
+                    <a href="#sobre">Sobre o projeto</a>
+                    <a href="#formulario" class="btn btn-primary">Quero conhecer</a>
+                </nav>
+
+                <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <nav class="nav-mobile" id="navMobile" aria-label="Navegação mobile">
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#encontrar">O que você pode encontrar</a>
+                <a href="#acessibilidade">Acessibilidade</a>
+                <a href="#sobre">Sobre o projeto</a>
+                <a href="#formulario" class="btn btn-primary">Quero conhecer</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <p class="hero-tag">SEUS DIREITOS, SEM COMPLICAÇÃO.</p>
+                        <h1 id="hero-title">Conhecer seus direitos deveria ser simples.</h1>
+                        <p class="hero-subtitle">Entenda melhor seus direitos como consumidor, descubra quais caminhos pode seguir e encontre informações confiáveis em uma linguagem que faz sentido para você.</p>
+                        <div class="hero-buttons">
+                            <a href="#formulario" class="btn btn-primary btn-lg">Quero conhecer a DireitoParaTodos</a>
+                            <a href="#como-funciona" class="btn btn-secondary btn-lg">Ver como funciona</a>
+                        </div>
+                        <p class="hero-microtext">Informação jurídica educativa, explicada de forma simples e acessível.</p>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="phone-demo-container">
+                            <div class="phone-mockup" id="heroPhone" role="img" aria-label="Demonstração interativa do aplicativo DireitoParaTodos — Demonstração conceitual em desenvolvimento">
+                                <span class="phone-demo-badge">Demonstração conceitual</span>
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+
+                                        <!-- Screen 1: Home -->
+                                        <div class="phone-demo-screen active" id="screen-home">
+                                            <div class="phone-status-bar">
+                                                <span class="status-time">9:41</span>
+                                                <div class="status-icons">
+                                                    <span></span><span></span><span></span><span></span>
+                                                </div>
+                                            </div>
+                                            <div class="phone-app-header">
+                                                <div style="display:flex; align-items:center; gap:6px;">
+                                                    <div class="app-logo-mini"></div>
+                                                    <span class="app-title">DireitoParaTodos</span>
+                                                </div>
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px; color:#8298B8;" aria-hidden="true">
+                                                    <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                                    <path d="M13.73 21a2 2 0 01-3.46 0"/>
+                                                </svg>
+                                            </div>
+                                            <div class="phone-greeting">Olá! <strong>Bem-vindo</strong></div>
+                                            <div class="phone-search-bar">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                    <circle cx="11" cy="11" r="8"/>
+                                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                                </svg>
+                                                <span class="search-text" id="searchText">Qual é a sua dúvida?</span>
+                                                <span class="search-cursor"></span>
+                                            </div>
+                                            <div class="phone-section-label">Categorias</div>
+                                            <div class="phone-cat-grid">
+                                                <div class="phone-cat-tile" id="cat1">
+                                                    <div class="cat-tile-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                                            <line x1="3" y1="6" x2="21" y2="6"/>
+                                                            <path d="M16 10a4 4 0 01-8 0"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="cat-tile-label">Compras<br>e entregas</div>
+                                                </div>
+                                                <div class="phone-cat-tile" id="cat2">
+                                                    <div class="cat-tile-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                            <rect x="1" y="4" width="22" height="16" rx="2"/>
+                                                            <line x1="1" y1="10" x2="23" y2="10"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="cat-tile-label">Cobranças<br>e pagamentos</div>
+                                                </div>
+                                                <div class="phone-cat-tile" id="cat3">
+                                                    <div class="cat-tile-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                                            <polyline points="14 2 14 8 20 8"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="cat-tile-label">Cancelamentos<br>e contratos</div>
+                                                </div>
+                                                <div class="phone-cat-tile" id="cat4">
+                                                    <div class="cat-tile-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="10"/>
+                                                            <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+                                                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="cat-tile-label">Garantias<br>e reembolsos</div>
+                                                </div>
+                                            </div>
+                                            <div class="phone-section-label">Conteúdo do dia</div>
+                                            <div class="phone-content-card">
+                                                <span class="content-badge">Educativo</span>
+                                                <h5>Prazos de entrega: o que saber</h5>
+                                                <div class="content-body">Entenda os prazos considerados e quais informações consultar quando uma compra atrasa...</div>
+                                            </div>
+                                            <div class="phone-progress-dots">
+                                                <div class="pdot active"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                            </div>
+                                            <div class="phone-bottom-nav">
+                                                <div class="nav-item active">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                                    <span>Inicio</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                                    <span>Buscar</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                                    <span>Temas</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                                    <span>Perfil</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Screen 2: Category Selected -->
+                                        <div class="phone-demo-screen" id="screen-category">
+                                            <div class="phone-status-bar">
+                                                <span class="status-time">9:41</span>
+                                                <div class="status-icons">
+                                                    <span></span><span></span><span></span><span></span>
+                                                </div>
+                                            </div>
+                                            <div class="phone-app-header">
+                                                <div style="display:flex; align-items:center; gap:6px;">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px; height:16px; color:var(--azul-marinho);"><polyline points="15 18 9 12 15 6"/></svg>
+                                                    <span class="app-title" style="font-size:0.78rem;">Compras e entregas</span>
+                                                </div>
+                                            </div>
+                                            <div class="phone-section-label">Escolha sua situacao</div>
+                                            <div class="phone-cat-grid">
+                                                <div class="phone-cat-tile selected">
+                                                    <div class="cat-tile-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                                                    </div>
+                                                    <div class="cat-tile-label">Compra<br>nao chegou</div>
+                                                </div>
+                                                <div class="phone-cat-tile">
+                                                    <div class="cat-tile-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                                    </div>
+                                                    <div class="cat-tile-label">Atraso<br>na entrega</div>
+                                                </div>
+                                                <div class="phone-cat-tile">
+                                                    <div class="cat-tile-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+                                                    </div>
+                                                    <div class="cat-tile-label">Produto<br>com defeito</div>
+                                                </div>
+                                                <div class="phone-cat-tile">
+                                                    <div class="cat-tile-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                                                    </div>
+                                                    <div class="cat-tile-label">Devolucao<br>e troca</div>
+                                                </div>
+                                            </div>
+                                            <div class="phone-content-card" style="border-left:3px solid var(--dourado);">
+                                                <span class="content-badge">Educativo</span>
+                                                <h5>Compra nao chegou? Entenda</h5>
+                                                <div class="content-body">Voce escolheu o tema sobre compras que nao chegaram. Veja a seguir informacoes educativas e passos que pode considerar...</div>
+                                            </div>
+                                            <div class="phone-acc-bar">
+                                                <div class="acc-pill">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                                                    A+
+                                                </div>
+                                                <div class="acc-pill">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                                                    Contraste
+                                                </div>
+                                            </div>
+                                            <div class="phone-progress-dots">
+                                                <div class="pdot"></div>
+                                                <div class="pdot active"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                            </div>
+                                            <div class="phone-bottom-nav">
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                                    <span>Inicio</span>
+                                                </div>
+                                                <div class="nav-item active">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                                    <span>Buscar</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                                    <span>Temas</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                                    <span>Perfil</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Screen 3: Content Detail -->
+                                        <div class="phone-demo-screen" id="screen-content">
+                                            <div class="phone-status-bar">
+                                                <span class="status-time">9:41</span>
+                                                <div class="status-icons">
+                                                    <span></span><span></span><span></span><span></span>
+                                                </div>
+                                            </div>
+                                            <div class="phone-app-header">
+                                                <div style="display:flex; align-items:center; gap:6px;">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px; height:16px; color:var(--azul-marinho);"><polyline points="15 18 9 12 15 6"/></svg>
+                                                    <span class="app-title" style="font-size:0.72rem;">Compra nao chegou</span>
+                                                </div>
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px; color:#8298B8;"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                                            </div>
+                                            <div class="phone-content-card" style="border-left:3px solid var(--dourado);">
+                                                <span class="content-badge">Exemplo educativo</span>
+                                                <h5>Prazos e direitos: informacoes uteis</h5>
+                                                <div class="content-body" style="margin-bottom:6px;">Abaixo, apresentamos informacoes educativas sobre o que considerar quando uma compra nao chega dentro do prazo previsto.</div>
+                                            </div>
+                                            <div class="phone-content-card">
+                                                <h5 style="margin-bottom:6px;">Passos que pode considerar</h5>
+                                                <div class="content-step">
+                                                    <div class="step-dot">1</div>
+                                                    <div class="step-text">Confira o prazo de entrega informado na compra</div>
+                                                </div>
+                                                <div class="content-step">
+                                                    <div class="step-dot">2</div>
+                                                    <div class="step-text">Entre em contato com o fornecedor por escrito</div>
+                                                </div>
+                                                <div class="content-step">
+                                                    <div class="step-dot">3</div>
+                                                    <div class="step-text">Registre o pedido com data e protocolo</div>
+                                                </div>
+                                                <div class="content-step">
+                                                    <div class="step-dot">4</div>
+                                                    <div class="step-text">Caso nao resolva, conheca canais oficiais</div>
+                                                </div>
+                                            </div>
+                                            <div class="phone-content-card" style="background:var(--azul-claro);">
+                                                <h5 style="font-size:0.6rem;">Lembrete</h5>
+                                                <div class="content-body">Estas informacoes sao educativas. Cada situacao pode ter particularidades. Para casos especificos, considere buscar atendimento profissional.</div>
+                                            </div>
+                                            <div class="phone-progress-dots">
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot active"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                            </div>
+                                            <div class="phone-bottom-nav">
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                                    <span>Inicio</span>
+                                                </div>
+                                                <div class="nav-item active">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                                    <span>Buscar</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                                    <span>Temas</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                                    <span>Perfil</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Screen 4: AI Q&A -->
+                                        <div class="phone-demo-screen" id="screen-qa">
+                                            <div class="phone-status-bar">
+                                                <span class="status-time">9:41</span>
+                                                <div class="status-icons">
+                                                    <span></span><span></span><span></span><span></span>
+                                                </div>
+                                            </div>
+                                            <div class="phone-app-header">
+                                                <div style="display:flex; align-items:center; gap:6px;">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px; height:16px; color:var(--azul-marinho);"><polyline points="15 18 9 12 15 6"/></svg>
+                                                    <span class="app-title" style="font-size:0.72rem;">Tirar duvida</span>
+                                                </div>
+                                                <div class="app-logo-mini" style="background:var(--dourado);"></div>
+                                            </div>
+                                            <div class="phone-typing-area">
+                                                <div class="user-label">Voce</div>
+                                                <div class="user-question">Comprei um produto e ele ainda nao chegou. O que posso fazer?</div>
+                                                <div class="ai-label">
+                                                    <span class="ai-dot"></span>
+                                                    DireitoParaTodos
+                                                </div>
+                                                <div id="qaTypingIndicator" class="typing-indicator">
+                                                    <span></span><span></span><span></span>
+                                                </div>
+                                                <div id="qaResponse" class="ai-response" style="display:none;">
+                                                    Esta e uma resposta de demonstracao. O aplicativo tera por objetivo apresentar informacoes educativas sobre prazos de entrega, direitos do consumidor e canais de comunicacao com o fornecedor — em linguagem simples e com referencias para consulta.
+                                                </div>
+                                            </div>
+                                            <div class="phone-content-card" style="background:var(--azul-claro); border:none;">
+                                                <span class="content-badge" style="background:var(--dourado); color:var(--azul-marinho);">Dica</span>
+                                                <div class="content-body">Voce tambem pode navegar pelas categorias para encontrar informacoes organizadas por tema.</div>
+                                            </div>
+                                            <div class="phone-progress-dots">
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot active"></div>
+                                                <div class="pdot"></div>
+                                            </div>
+                                            <div class="phone-bottom-nav">
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                                    <span>Inicio</span>
+                                                </div>
+                                                <div class="nav-item active">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                                    <span>Buscar</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                                    <span>Temas</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                                    <span>Perfil</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Screen 5: Sources -->
+                                        <div class="phone-demo-screen" id="screen-sources">
+                                            <div class="phone-status-bar">
+                                                <span class="status-time">9:41</span>
+                                                <div class="status-icons">
+                                                    <span></span><span></span><span></span><span></span>
+                                                </div>
+                                            </div>
+                                            <div class="phone-app-header">
+                                                <div style="display:flex; align-items:center; gap:6px;">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px; height:16px; color:var(--azul-marinho);"><polyline points="15 18 9 12 15 6"/></svg>
+                                                    <span class="app-title" style="font-size:0.72rem;">Fontes oficiais</span>
+                                                </div>
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px; color:var(--azul-marinho);"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                                            </div>
+                                            <div class="phone-section-label">Referencias para consulta</div>
+                                            <div class="phone-sources">
+                                                <h5>Canais e documentos</h5>
+                                                <div class="phone-source-item">
+                                                    <div class="source-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 4 17 4 12V6l8-3 8 3z"/></svg>
+                                                    </div>
+                                                    <span class="source-text">CDC - Codigo de Defesa do Consumidor</span>
+                                                    <span class="source-ext">Lei</span>
+                                                </div>
+                                                <div class="phone-source-item">
+                                                    <div class="source-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                                                    </div>
+                                                    <span class="source-text">Procon - Protecao e Defesa</span>
+                                                    <span class="source-ext">Canal</span>
+                                                </div>
+                                                <div class="phone-source-item">
+                                                    <div class="source-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/></svg>
+                                                    </div>
+                                                    <span class="source-text">Consumidor.gov.br</span>
+                                                    <span class="source-ext">Site</span>
+                                                </div>
+                                                <div class="phone-source-item">
+                                                    <div class="source-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                                                    </div>
+                                                    <span class="source-text">Ministerio da Justica</span>
+                                                    <span class="source-ext">Orgao</span>
+                                                </div>
+                                                <div class="phone-source-item">
+                                                    <div class="source-icon">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                                                    </div>
+                                                    <span class="source-text">Cartilha do Consumidor</span>
+                                                    <span class="source-ext">Guia</span>
+                                                </div>
+                                            </div>
+                                            <div class="phone-content-card" style="background:var(--azul-claro); border-left:3px solid var(--dourado);">
+                                                <span class="content-badge">Transparencia</span>
+                                                <div class="content-body">As fontes sao apresentadas para que voce possa conferir e aprofundar sua pesquisa. As informacoes do app sao educativas e nao substituem atendimento profissional.</div>
+                                            </div>
+                                            <div class="phone-progress-dots">
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot"></div>
+                                                <div class="pdot active"></div>
+                                            </div>
+                                            <div class="phone-bottom-nav">
+                                                <div class="nav-item active">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                                    <span>Inicio</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                                    <span>Buscar</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                                    <span>Temas</span>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                                    <span>Perfil</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROBLEM ===== -->
+        <section class="section-pad" aria-labelledby="problem-title">
+            <div class="container">
+                <div style="text-align:center;" class="reveal">
+                    <span class="section-tag">O PROBLEMA</span>
+                    <h2 class="section-title" id="problem-title">Já passou por alguma dessas situações?</h2>
+                    <p class="section-subtitle">Quando surge um problema de consumo, encontrar informações claras sobre seus direitos não deveria ser mais uma dificuldade.</p>
+                </div>
+
+                <div class="cards-grid-3">
+                    <div class="card reveal delay-1">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13" rx="1"/>
+                                <path d="M16 8h4l3 3v5h-7V8z"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <h3>Sua compra não chegou?</h3>
+                        <p>Entenda quais informações consultar e quais passos considerar diante de um atraso ou problema na entrega.</p>
+                    </div>
+
+                    <div class="card reveal delay-2">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Encontrou uma cobrança estranha?</h3>
+                        <p>Descubra como compreender a situação e onde buscar informações para verificar seus direitos.</p>
+                    </div>
+
+                    <div class="card reveal delay-3">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 6l18 0"/>
+                                <path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                                <path d="M19 6l-2 14a2 2 0 01-2 2H9a2 2 0 01-2-2L5 6"/>
+                                <line x1="10" y1="11" x2="10" y2="17"/>
+                                <line x1="14" y1="11" x2="14" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3>Está com dificuldade para cancelar ou pedir reembolso?</h3>
+                        <p>Conheça os procedimentos relevantes e encontre fontes que ajudem você a entender suas opções.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOLUTION ===== -->
+        <section class="solution section-pad" id="encontrar" aria-labelledby="solution-title">
+            <div class="container">
+                <div class="solution-intro reveal">
+                    <span class="section-tag">A SOLUÇÃO</span>
+                    <h2 class="section-title" id="solution-title">Menos juridiquês. Mais clareza para agir.</h2>
+                    <p>A DireitoParaTodos nasce com uma proposta simples: aproximar as pessoas das informações sobre seus direitos por meio da tecnologia, da inteligência artificial e de uma linguagem fácil de compreender.</p>
+                </div>
+
+                <div class="benefits-grid-4">
+                    <div class="benefit reveal-scale delay-1">
+                        <div class="benefit-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+                            </svg>
+                        </div>
+                        <h4>Entenda melhor</h4>
+                        <p>Explicações em linguagem simples.</p>
+                    </div>
+
+                    <div class="benefit reveal-scale delay-2">
+                        <div class="benefit-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 11 12 14 22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                        </div>
+                        <h4>Descubra caminhos</h4>
+                        <p>Informações e procedimentos organizados por etapas.</p>
+                    </div>
+
+                    <div class="benefit reveal-scale delay-3">
+                        <div class="benefit-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 4 17 4 12V6l8-3 8 3z"/>
+                            </svg>
+                        </div>
+                        <h4>Consulte fontes confiáveis</h4>
+                        <p>Acesso a referências e canais oficiais.</p>
+                    </div>
+
+                    <div class="benefit reveal-scale delay-4">
+                        <div class="benefit-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="7" r="1.5" fill="currentColor"/>
+                                <path d="M9 12h6M12 12v5"/>
+                            </svg>
+                        </div>
+                        <h4>Tenha mais acessibilidade</h4>
+                        <p>Experiência pensada para facilitar a leitura e a compreensão.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HOW IT WORKS ===== -->
+        <section class="section-pad" id="como-funciona" aria-labelledby="how-title">
+            <div class="container">
+                <div style="text-align:center;" class="reveal">
+                    <span class="section-tag">COMO FUNCIONA</span>
+                    <h2 class="section-title" id="how-title">Entender por onde começar pode ser mais simples.</h2>
+                </div>
+
+                <div class="steps-container" style="margin-top: 56px;">
+                    <div class="steps-line reveal" aria-hidden="true"></div>
+
+                    <div class="step reveal delay-1">
+                        <div class="step-num">01</div>
+                        <h4>Encontre sua situação</h4>
+                        <p>Escolha o tema relacionado à sua dúvida.</p>
+                    </div>
+
+                    <div class="step reveal delay-2">
+                        <div class="step-num">02</div>
+                        <h4>Compreenda as informações</h4>
+                        <p>Veja explicações em linguagem simples.</p>
+                    </div>
+
+                    <div class="step reveal delay-3">
+                        <div class="step-num">03</div>
+                        <h4>Conheça os próximos passos possíveis</h4>
+                        <p>Consulte informações educativas sobre procedimentos relevantes.</p>
+                    </div>
+
+                    <div class="step reveal delay-4">
+                        <div class="step-num">04</div>
+                        <h4>Confira as fontes</h4>
+                        <p>Acesse referências oficiais para aprofundar sua pesquisa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== APP DEMO ===== -->
+        <section class="app-demo section-pad" aria-labelledby="demo-title">
+            <div class="container">
+                <div class="demo-layout">
+                    <div class="demo-text reveal-left">
+                        <span class="section-tag">DEMONSTRAÇÃO</span>
+                        <h2 class="section-title" id="demo-title">Seus direitos, em uma experiência mais fácil de entender.</h2>
+                        <p style="color:#4B5563; margin-bottom:32px; font-size:1.05rem;">Veja como será a experiência no aplicativo — em desenvolvimento.</p>
+
+                        <ul class="demo-features">
+                            <li class="demo-feature reveal-left delay-1">
+                                <div class="df-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Barra de pesquisa</h4>
+                                    <p>Digite sua dúvida e encontre informações relevantes.</p>
+                                </div>
+                            </li>
+                            <li class="demo-feature reveal-left delay-2">
+                                <div class="df-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Categorias por tema</h4>
+                                    <p>Compras e entregas, cobranças e pagamentos, cancelamentos e contratos.</p>
+                                </div>
+                            </li>
+                            <li class="demo-feature reveal-left delay-3">
+                                <div class="df-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/>
+                                        <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Conteúdos explicativos</h4>
+                                    <p>Explicações educativas em linguagem acessível.</p>
+                                </div>
+                            </li>
+                            <li class="demo-feature reveal-left delay-4">
+                                <div class="df-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 12l2 2 4-4"/>
+                                        <path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 4 17 4 12V6l8-3 8 3z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Atalho para fontes oficiais</h4>
+                                    <p>Referências para que você possa aprofundar sua pesquisa.</p>
+                                </div>
+                            </li>
+                            <li class="demo-feature reveal-left delay-5">
+                                <div class="df-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <circle cx="12" cy="7" r="1.5" fill="currentColor"/>
+                                        <path d="M9 12h6M12 12v5"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Opções de acessibilidade</h4>
+                                    <p>Ajustes de fonte, contraste e navegação facilitada.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="qa-demo reveal delay-3">
+                            <span class="qa-badge">Exemplo educativo — conteúdo fictício</span>
+                            <p class="qa-question">"Comprei um produto e ele ainda não chegou. O que posso fazer?"</p>
+                            <p class="qa-answer">Esta é uma demonstração conceitual. O aplicativo terá por objetivo apresentar informações educativas sobre prazos de entrega, direitos do consumidor e canais de comunicação com o fornecedor, em linguagem simples e com referências para consulta.</p>
+                        </div>
+                    </div>
+
+                    <div class="demo-phone-wrapper reveal-right">
+                        <div class="phone-mockup" role="img" aria-label="Mockup do aplicativo em desenvolvimento mostrando tela inicial com barra de pesquisa, categorias e área de conteúdo">
+                            <span class="phone-demo-badge">Em desenvolvimento</span>
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <div class="phone-header">
+                                        <h4>DireitoParaTodos</h4>
+                                    </div>
+                                    <div class="phone-search">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="11" cy="11" r="8"/>
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                        </svg>
+                                        <span>Qual é a sua dúvida?</span>
+                                    </div>
+                                    <div class="phone-cat">
+                                        <div class="cat-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                                <line x1="3" y1="6" x2="21" y2="6"/>
+                                                <path d="M16 10a4 4 0 01-8 0"/>
+                                            </svg>
+                                        </div>
+                                        <span>Compras e entregas</span>
+                                    </div>
+                                    <div class="phone-cat">
+                                        <div class="cat-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                <rect x="1" y="4" width="22" height="16" rx="2"/>
+                                                <line x1="1" y1="10" x2="23" y2="10"/>
+                                            </svg>
+                                        </div>
+                                        <span>Cobranças e pagamentos</span>
+                                    </div>
+                                    <div class="phone-cat">
+                                        <div class="cat-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                                <polyline points="14 2 14 8 20 8"/>
+                                                <line x1="9" y1="15" x2="15" y2="15"/>
+                                            </svg>
+                                        </div>
+                                        <span>Cancelamentos e contratos</span>
+                                    </div>
+                                    <div class="phone-content">
+                                        <h5>Conteúdo explicativo</h5>
+                                        <p>Entenda seus direitos em linguagem simples e clara...</p>
+                                    </div>
+                                    <div class="phone-accessibility" aria-label="Opções de acessibilidade">
+                                        <div class="acc-btn" title="Aumentar fonte">A+</div>
+                                        <div class="acc-btn" title="Alto contraste">◐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DIFFERENTIALS ===== -->
+        <section class="section-pad" aria-labelledby="diff-title">
+            <div class="container">
+                <div style="text-align:center;" class="reveal">
+                    <span class="section-tag">DIFERENCIAIS</span>
+                    <h2 class="section-title" id="diff-title">Informação sobre direitos que fala a sua língua.</h2>
+                </div>
+
+                <div class="diff-grid" style="margin-top: 48px;">
+                    <div class="diff-block reveal delay-1">
+                        <div class="diff-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+                            </svg>
+                        </div>
+                        <h4>Linguagem simples</h4>
+                        <p>Menos termos difíceis, mais compreensão.</p>
+                    </div>
+
+                    <div class="diff-block reveal delay-2">
+                        <div class="diff-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                            </svg>
+                        </div>
+                        <h4>Organização</h4>
+                        <p>Informações separadas por situações do cotidiano.</p>
+                    </div>
+
+                    <div class="diff-block reveal delay-3">
+                        <div class="diff-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 4 17 4 12V6l8-3 8 3z"/>
+                            </svg>
+                        </div>
+                        <h4>Transparência</h4>
+                        <p>Referências para que as pessoas possam conferir as informações.</p>
+                    </div>
+
+                    <div class="diff-block reveal delay-4" id="acessibilidade">
+                        <div class="diff-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="7" r="1.5" fill="currentColor"/>
+                                <path d="M9 12h6M12 12v5"/>
+                            </svg>
+                        </div>
+                        <h4>Acessibilidade</h4>
+                        <p>Atenção à legibilidade, navegação e facilidade de uso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TRUST & RESPONSIBILITY ===== -->
+        <section class="trust section-pad" id="sobre" aria-labelledby="trust-title">
+            <div class="container">
+                <div class="trust-content reveal">
+                    <span class="section-tag">CONFIANÇA E RESPONSABILIDADE</span>
+                    <h2 class="section-title" id="trust-title">Tecnologia para informar. Transparência para orientar.</h2>
+                    <p>Nosso compromisso é tornar a informação jurídica educativa mais acessível. A proposta é ajudar você a compreender temas relacionados aos seus direitos, conhecer caminhos possíveis e encontrar fontes relevantes para continuar sua pesquisa.</p>
+
+                    <div class="trust-notice" role="note">
+                        <strong>Aviso importante</strong>
+                        <p>A DireitoParaTodos tem finalidade educativa. As informações apresentadas não substituem aconselhamento jurídico individualizado, análise profissional de um caso concreto ou atendimento pelos órgãos competentes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA SECTION ===== -->
+        <section class="cta-section reveal-scale" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 id="cta-title">O primeiro passo para conhecer seus direitos é entender por onde começar.</h2>
+                <p>Estamos desenvolvendo uma proposta para tornar a informação sobre direitos do consumidor mais simples e acessível. Sua participação pode ajudar a construir uma experiência melhor.</p>
+                <a href="#formulario" class="btn btn-light btn-lg">Quero conhecer e testar a proposta</a>
+            </div>
+        </section>
+
+        <!-- ===== FORM SECTION ===== -->
+        <section class="form-section section-pad" id="formulario" aria-labelledby="form-title">
+            <div class="container">
+                <div class="form-wrapper reveal-scale">
+                    <h3 id="form-title">Ajude a construir a DireitoParaTodos.</h3>
+                    <p>Conte como podemos tornar a informação sobre direitos mais fácil de entender.</p>
+
+                    <div class="form-notice" role="status">
+                        <strong>Aviso:</strong> Este formulário ainda não está conectado a um serviço de envio. Ao enviar, seus dados não serão armazenados. A integração será ativada quando o serviço estiver disponível.
+                    </div>
+
+                    <form id="interestForm" novalidate aria-label="Formulário de manifestação de interesse" onsubmit="return handleFormSubmit(event);">
+                        <div class="form-group">
+                            <label for="nome">Nome <span class="optional">(opcional)</span></label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail <span class="optional">(obrigatório apenas se quiser ser contatado)</span></label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tema">Qual tema mais interessa a você?</label>
+                            <select id="tema" name="tema">
+                                <option value="">Selecione um tema</option>
+                                <option value="compras">Compras e entregas</option>
+                                <option value="cobrancas">Cobranças e pagamentos</option>
+                                <option value="cancelamentos">Cancelamentos e contratos</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="consentimento" name="consentimento">
+                            <label for="consentimento">Aceito receber contato da DireitoParaTodos sobre o desenvolvimento do projeto, quando aplicável.</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit-btn">Quero participar</button>
+
+                        <p class="form-privacy">
+                            Solicitamos apenas os dados necessários. Sua privacidade é importante.
+                            <a href="#" aria-label="Política de privacidade — será disponibilizada quando publicada">Política de privacidade</a> (disponível quando publicada).
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" aria-label="DireitoParaTodos — Página inicial">
+                        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="36" height="36" rx="10" fill="#0b62fa"/>
+                            <path d="M11 12h14M11 18h14M11 24h9" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="26" cy="24" r="3" fill="#002a7b"/>
+                        </svg>
+                        <span style="color:#FFFFFF;">DireitoParaTodos</span>
+                    </a>
+                    <p>Justiça acessível. Informação para todos.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Navegação</h5>
+                    <ul>
+                        <li><a href="#como-funciona">Como funciona</a></li>
+                        <li><a href="#encontrar">O que você pode encontrar</a></li>
+                        <li><a href="#acessibilidade">Acessibilidade</a></li>
+                        <li><a href="#sobre">Sobre o projeto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contato</h5>
+                    <ul>
+                        <li><a href="#formulario">Manifestar interesse</a></li>
+                        <li><a href="#" aria-label="Contato — será disponibilizado">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#" aria-label="Política de privacidade — será publicada">Política de privacidade</a></li>
+                        <li><a href="#sobre">Aviso educativo</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-notice">
+                <p>A DireitoParaTodos tem finalidade educativa. As informações apresentadas não substituem aconselhamento jurídico individualizado ou atendimento pelos órgãos competentes.</p>
+                <p class="footer-final">Direito de entender também é acesso à justiça.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Mobile Navigation Toggle =====
+        const navToggle = document.getElementById('navToggle');
+        const navMobile = document.getElementById('navMobile');
+
+        navToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMobile.classList.toggle('active');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+        });
+
+        // Close mobile menu when a link is clicked
+        navMobile.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMobile.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ===== Scroll-triggered reveal animations =====
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -60px 0px'
+        });
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // ===== Hero Phone Interactive Demo =====
+        const screens = [
+            'screen-home',
+            'screen-category',
+            'screen-content',
+            'screen-qa',
+            'screen-sources'
+        ];
+        let currentScreen = 0;
+        let qaShown = false;
+
+        function switchScreen(index) {
+            screens.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.remove('active');
+            });
+            const target = document.getElementById(screens[index]);
+            if (target) target.classList.add('active');
+
+            // Handle Q&A typing animation
+            if (screens[index] === 'screen-qa' && !qaShown) {
+                qaShown = true;
+                showTypingAnimation();
+            }
+        }
+
+        function showTypingAnimation() {
+            const indicator = document.getElementById('qaTypingIndicator');
+            const response = document.getElementById('qaResponse');
+
+            if (!indicator || !response) return;
+
+            indicator.style.display = 'flex';
+            response.style.display = 'none';
+
+            setTimeout(() => {
+                indicator.style.display = 'none';
+                response.style.display = 'block';
+            }, 2500);
+        }
+
+        // Auto-advance through screens
+        let screenTimer = setInterval(() => {
+            currentScreen = (currentScreen + 1) % screens.length;
+            switchScreen(currentScreen);
+        }, 4500);
+
+        // Pause auto-advance when phone is not visible, resume when visible
+        const heroPhone = document.getElementById('heroPhone');
+        if (heroPhone) {
+            const phoneObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Resume
+                        clearInterval(screenTimer);
+                        screenTimer = setInterval(() => {
+                            currentScreen = (currentScreen + 1) % screens.length;
+                            switchScreen(currentScreen);
+                        }, 4500);
+                    } else {
+                        // Pause
+                        clearInterval(screenTimer);
+                    }
+                });
+            }, { threshold: 0.2 });
+            phoneObserver.observe(heroPhone);
+        }
+
+        // ===== Typing animation in search bar (home screen) =====
+        const searchTextEl = document.getElementById('searchText');
+        if (searchTextEl) {
+            const phrases = [
+                'Qual e a sua duvida?',
+                'Compra nao chegou...',
+                'Cobranca indevida...',
+                'Como cancelar contrato?'
+            ];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeSearch() {
+                const currentPhrase = phrases[phraseIndex];
+
+                if (!isDeleting) {
+                    searchTextEl.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                    if (charIndex === currentPhrase.length) {
+                        isDeleting = true;
+                        setTimeout(typeSearch, 2000);
+                        return;
+                    }
+                } else {
+                    searchTextEl.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        phraseIndex = (phraseIndex + 1) % phrases.length;
+                    }
+                }
+
+                setTimeout(typeSearch, isDeleting ? 40 : 80);
+            }
+
+            // Start typing after a brief delay
+            setTimeout(typeSearch, 1500);
+        }
+
+        // ===== Form Submission =====
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formNotice = form.querySelector('.form-notice');
+
+            // Since the form is not connected to a real service, we inform the user
+            formNotice.style.background = '#E8F1FF';
+            formNotice.style.color = '#002a7b';
+            formNotice.innerHTML = '<strong>Agradecemos seu interesse!</strong> Este formulário ainda não está conectado a um serviço de envio. Sua manifestação não foi registrada. Entraremos em contato quando a integração estiver ativa.';
+
+            // Reset form
+            form.reset();
+
+            // Scroll to notice
+            formNotice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            return false;
+        }
+
+        // ===== Smooth scroll for anchor links (enhanced for sticky header offset) =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId === '') return;
+
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const headerHeight = 72;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
